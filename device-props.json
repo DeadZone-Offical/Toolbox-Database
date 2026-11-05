@@ -1,0 +1,400 @@
+{
+  "devices": [
+    {
+      "name": "ASUS ROG Phone 8 Pro",
+      "BRAND": "asus",
+      "DEVICE": "ASUS_AI2401",
+      "MANUFACTURER": "asus",
+      "MODEL": "ASUS_AI2401",
+      "FINGERPRINT": "asus/WW_AI2401/ASUS_AI2401:14/UKQ1.231003.002/34.1420.1420.427-0:user/release-keys",
+      "PRODUCT": "WW_AI2401"
+    },
+    {
+      "name": "Asus ROG Phone 9 Pro",
+      "BRAND": "asus",
+      "DEVICE": "ASUS_AI2501",
+      "MANUFACTURER": "asus",
+      "MODEL": "ASUS_AI2501",
+      "FINGERPRINT": "asus/WW_AI2501/ASUS_AI2501:15/AQ3A.240829.003/35.1810.1810.43-0:user/release-keys",
+      "PRODUCT": "WW_AI2501"
+    },
+    {
+      "name": "ROG Phone 5s",
+      "BRAND": "asus",
+      "DEVICE": "ASUS_I005_1",
+      "MANUFACTURER": "asus",
+      "MODEL": "ASUS_I005DA",
+      "FINGERPRINT": "asus/WW_I005D/ASUS_I005_1:12/SKQ1.210821.001/31.0810.1226.114:user/release-keys",
+      "PRODUCT": "WW_I005D"
+    },
+    {
+      "name": "ROG Phone 6D Ultimate",
+      "BRAND": "asus",
+      "DEVICE": "ASUS_AI2203_D",
+      "MANUFACTURER": "asus",
+      "MODEL": "ASUS_AI2203_D",
+      "FINGERPRINT": "asus/WW_AI2203_D/ASUS_AI2203_D:14/UP1A.231005.007/34.0804.1204.65-0:user/release-keys",
+      "PRODUCT": "WW_AI2203_D"
+    },
+    {
+      "name": "Black Shark 4 (China)",
+      "BRAND": "blackshark",
+      "DEVICE": "penrose",
+      "MANUFACTURER": "blackshark",
+      "MODEL": "SHARK PRS-A0",
+      "FINGERPRINT": "blackshark/penrose/penrose:12/SKQ1.211006.001/2206151830:user/release-keys",
+      "PRODUCT": "penrose"
+    },
+    {
+      "name": "iQOO 12 Pro",
+      "BRAND": "vivo",
+      "DEVICE": "PD2329",
+      "MANUFACTURER": "vivo",
+      "MODEL": "V2329A",
+      "FINGERPRINT": "vivo/PD2329/PD2329:15/AP3A.240905.015.A2/compiler250328151630:user/release-keys",
+      "PRODUCT": "PD2329"
+    },
+    {
+      "name": "iQOO 15",
+      "BRAND": "vivo",
+      "DEVICE": "PD2505",
+      "MANUFACTURER": "vivo",
+      "MODEL": "V2505A",
+      "FINGERPRINT": "vivo/PD2505/PD2505:16/BP2A.250605.031.A3/compiler251120183000:user/release-keys",
+      "PRODUCT": "PD2505"
+    },
+    {
+      "name": "Lenovo Y700 - 2022",
+      "BRAND": "Lenovo",
+      "DEVICE": "TB-9707F",
+      "MANUFACTURER": "LENOVO",
+      "MODEL": "Lenovo TB-9707F",
+      "FINGERPRINT": "Lenovo/TB-9707F/TB-9707F:13/TKQ1.221013.002/15.0.342_231018:user/release-keys",
+      "PRODUCT": "TB-9707F"
+    },
+    {
+      "name": "Lenovo Y700 - 2025",
+      "BRAND": "Lenovo",
+      "DEVICE": "TB321FU",
+      "MANUFACTURER": "LENOVO",
+      "MODEL": "TB321FU",
+      "FINGERPRINT": "Lenovo/TB321FU/TB321FU:16/BQ2A.250610.001-BP2A.250605.031.A3/ZUI_17.5.10.031_251125_ROW:user/release-keys",
+      "PRODUCT": "TB321FU"
+    },
+    {
+      "name": "Lenovo Yoga Tab Plus 12.7",
+      "BRAND": "Lenovo",
+      "DEVICE": "TB520FU",
+      "MANUFACTURER": "LENOVO",
+      "MODEL": "TB520FU",
+      "FINGERPRINT": "Lenovo/TB520FU/TB520FU:16/BQ2A.250610.001-BP2A.250605.031.A3/ZUXOS_1.5.10.051_251226:user/release-keys",
+      "PRODUCT": "TB520FU"
+    },
+    {
+      "name": "Lenovo Idea Tab 5G",
+      "BRAND": "Lenovo",
+      "DEVICE": "TB336FU",
+      "MANUFACTURER": "LENOVO",
+      "MODEL": "TB336FU",
+      "FINGERPRINT": "Lenovo/TB336FU/TB336FU:16/BP2A.250605.031.A3/251230_085:user/release-keys",
+      "PRODUCT": "TB336FU"
+    },
+    {
+      "name": "RedMagic 9 Pro",
+      "BRAND": "nubia",
+      "DEVICE": "NX769J",
+      "MANUFACTURER": "ZTE",
+      "MODEL": "NX769J",
+      "FINGERPRINT": "nubia/NX769J/NX769J:14/UKQ1.230917.001/20240813.173312:user/release-keys",
+      "PRODUCT": "NX769J"
+    },
+    {
+      "name": "RedMagic 10 Pro",
+      "BRAND": "nubia",
+      "DEVICE": "NX789J",
+      "MANUFACTURER": "ZTE",
+      "MODEL": "NX789J",
+      "FINGERPRINT": "nubia/NX789J-UN/NX789J:15/AQ3A.240812.002/20241212.194919:user/release-keys",
+      "PRODUCT": "NX789J-UN"
+    },
+    {
+      "name": "RedMagic Tablet 3 (Nova)",
+      "BRAND": "nubia",
+      "DEVICE": "NP03J",
+      "MANUFACTURER": "ZTE",
+      "MODEL": "NP03J",
+      "FINGERPRINT": "nubia/NP03J/NP03J:14/UKQ1.240116.001/20241015.162011:user/release-keys",
+      "PRODUCT": "NP03J"
+    },
+    {
+      "name": "OnePlus 11",
+      "BRAND": "OnePlus",
+      "DEVICE": "OP594DL1",
+      "MANUFACTURER": "OnePlus",
+      "MODEL": "CPH2449",
+      "FINGERPRINT": "OnePlus/CPH2449/OP594DL1:14/UKQ1.230924.001/U.15991b7_1_2:user/release-keys",
+      "PRODUCT": "CPH2449"
+    },
+    {
+      "name": "OnePlus 8 Pro 5G",
+      "BRAND": "OnePlus",
+      "DEVICE": "OnePlus8Pro",
+      "MANUFACTURER": "OnePlus",
+      "MODEL": "IN2023",
+      "FINGERPRINT": "OnePlus/OnePlus8Pro_EEA/OnePlus8Pro:13/RKQ1.211119.001/R.1128593_2_1:user/release-keys",
+      "PRODUCT": "OnePlus8Pro_EEA"
+    },
+    {
+      "name": "OnePlus 9 Pro 5G",
+      "BRAND": "OnePlus",
+      "DEVICE": "OnePlus9Pro",
+      "MANUFACTURER": "OnePlus",
+      "MODEL": "LE2123",
+      "FINGERPRINT": "OnePlus/OnePlus9Pro_EEA/OnePlus9Pro:14/UP1A.231005.007/U.14a6006_1_1:user/release-keys",
+      "PRODUCT": "OnePlus9Pro_EEA"
+    },
+    {
+      "name": "OnePlus 13",
+      "BRAND": "OnePlus",
+      "DEVICE": "OP5D0DL1",
+      "MANUFACTURER": "OnePlus",
+      "MODEL": "PJZ110",
+      "FINGERPRINT": "OnePlus/PJZ110/OP5D0DL1:15/AP3A.240617.008/V.1bd19a1-1-2:user/release-keys",
+      "PRODUCT": "PJZ110"
+    },
+    {
+      "name": "OnePlus 15",
+      "BRAND": "OnePlus",
+      "DEVICE": "OP60FFL1",
+      "MANUFACTURER": "OnePlus",
+      "MODEL": "PLK110",
+      "FINGERPRINT": "OnePlus/PLK110/OP60FFL1:16/BP2A.250605.031.A3/W.202511101200:user/release-keys",
+      "PRODUCT": "PLK110"
+    },
+    {
+      "name": "POCO F5",
+      "BRAND": "POCO",
+      "DEVICE": "marble",
+      "MANUFACTURER": "Xiaomi",
+      "MODEL": "23049PCD8G",
+      "FINGERPRINT": "POCO/marble_global/marble:14/UKQ1.230804.001/OS1.0.10.0.UMRMIXM:user/release-keys",
+      "PRODUCT": "marble_global"
+    },
+    {
+      "name": "POCO F8 Ultra",
+      "BRAND": "POCO",
+      "DEVICE": "myron",
+      "MANUFACTURER": "Xiaomi",
+      "MODEL": "25102PCBEG",
+      "FINGERPRINT": "POCO/myron_global/myron:16/BQ2A.250705.001-BP2A.250605.031.A3/OS3.0.3.0.WPMIDXM:user/release-keys",
+      "PRODUCT": "myron_global"
+    },
+    {
+      "name": "Realme P3 5G",
+      "BRAND": "realme",
+      "DEVICE": "RE601CL1",
+      "MANUFACTURER": "realme",
+      "MODEL": "RMX5075",
+      "FINGERPRINT": "realme/RMX5075IN/RE601CL1:15/AP3A.240617.008/1739523230894:user/release-keys",
+      "PRODUCT": "RMX5075IN"
+    },
+    {
+      "name": "Realme 14 5G",
+      "BRAND": "realme",
+      "DEVICE": "RE58B4L1",
+      "MANUFACTURER": "realme",
+      "MODEL": "RMX5070",
+      "FINGERPRINT": "realme/RMX5070/RE58B4L1:15/AP3A.240617.008/1738073230894:user/release-keys",
+      "PRODUCT": "RMX5070"
+    },
+    {
+      "name": "Realme 15 Pro 5G",
+      "BRAND": "realme",
+      "DEVICE": "RE60B4L1",
+      "MANUFACTURER": "realme",
+      "MODEL": "RMX5101",
+      "FINGERPRINT": "realme/RMX5101IN/RE60B4L1:15/AP3A.240617.008/V.R4T2.26cec0e-80bb4e-80b757:user/release-keys",
+      "PRODUCT": "RMX5101IN"
+    },
+    {
+      "name": "Samsung Galaxy S23 Ultra",
+      "BRAND": "samsung",
+      "DEVICE": "dm3q",
+      "MANUFACTURER": "samsung",
+      "MODEL": "SM-S918B",
+      "FINGERPRINT": "samsung/dm3qxxx/dm3q:14/UP1A.231005.007/S918BXXS6CXFE:user/release-keys",
+      "PRODUCT": "dm3qxxx"
+    },
+    {
+      "name": "Samsung Galaxy S25 Ultra",
+      "BRAND": "samsung",
+      "DEVICE": "pa3q",
+      "MANUFACTURER": "samsung",
+      "MODEL": "SM-S938B",
+      "FINGERPRINT": "samsung/pa3qxxx/pa3q:15/AP3A.240905.015.A2/S938BXXU1AYB4:user/release-keys",
+      "PRODUCT": "pa3qxxx"
+    },
+    {
+      "name": "Galaxy S24 Ultra",
+      "BRAND": "samsung",
+      "DEVICE": "e3q",
+      "MANUFACTURER": "samsung",
+      "MODEL": "SM-S928B",
+      "FINGERPRINT": "samsung/e3qxxx/e3q:14/UP1A.231005.007/S928BXXU1AXB5:user/release-keys",
+      "PRODUCT": "e3qxxx"
+    },
+    {
+      "name": "Galaxy Z Fold 5",
+      "BRAND": "samsung",
+      "DEVICE": "q5q",
+      "MANUFACTURER": "samsung",
+      "MODEL": "SM-F9460",
+      "FINGERPRINT": "samsung/q5qzcx/q5q:14/UP1A.231005.007/F9460ZCU2CXCF:user/release-keys",
+      "PRODUCT": "q5qzcx"
+    },
+    {
+      "name": "Xiaomi 11T Pro",
+      "BRAND": "Xiaomi",
+      "DEVICE": "vili",
+      "MANUFACTURER": "Xiaomi",
+      "MODEL": "2107113SG",
+      "FINGERPRINT": "Xiaomi/vili_global/vili:13/RKQ1.211001.001/V14.0.9.0.TKDMIXM:user/release-keys",
+      "PRODUCT": "vili_global"
+    },
+    {
+      "name": "Xiaomi 13",
+      "BRAND": "Xiaomi",
+      "DEVICE": "fuxi",
+      "MANUFACTURER": "Xiaomi",
+      "MODEL": "2211133G",
+      "FINGERPRINT": "Xiaomi/fuxi_eea/fuxi:14/UKQ1.230804.001/OS2.0.102.0.VMCEUXM:user/release-keys",
+      "PRODUCT": "fuxi_eea"
+    },
+    {
+      "name": "Xiaomi 13 Pro",
+      "BRAND": "Xiaomi",
+      "DEVICE": "nuwa",
+      "MANUFACTURER": "Xiaomi",
+      "MODEL": "2210132G",
+      "FINGERPRINT": "Xiaomi/nuwa_global/nuwa:14/UKQ1.230804.001/OS2.0.100.0.VMBMIXM:user/release-keys",
+      "PRODUCT": "nuwa_global"
+    },
+    {
+      "name": "Xiaomi 14 Pro",
+      "BRAND": "Xiaomi",
+      "DEVICE": "shennong",
+      "MANUFACTURER": "Xiaomi",
+      "MODEL": "23116PN5BC",
+      "FINGERPRINT": "Xiaomi/shennong/shennong:15/AQ3A.240627.003/OS2.0.202.0.VNBCNXM:user/release-keys",
+      "PRODUCT": "shennong"
+    },
+    {
+      "name": "Xiaomi 14 Ultra",
+      "BRAND": "Xiaomi",
+      "DEVICE": "aurora",
+      "MANUFACTURER": "Xiaomi",
+      "MODEL": "24030PN60G",
+      "FINGERPRINT": "Xiaomi/aurora_eea/aurora:14/UKQ1.240523.001/OS2.0.102.0.VNAEUXM:user/release-keys",
+      "PRODUCT": "aurora_eea"
+    },
+    {
+      "name": "Xiaomi 15 Ultra",
+      "BRAND": "Xiaomi",
+      "DEVICE": "xuanyuan",
+      "MANUFACTURER": "Xiaomi",
+      "MODEL": "25010PN30G",
+      "FINGERPRINT": "Xiaomi/xuanyuan_eea/xuanyuan:15/AQ3A.240912.001/OS2.0.10.0.VOAEUXM:user/release-keys",
+      "PRODUCT": "xuanyuan_eea"
+    },
+    {
+      "name": "Xiaomi 17",
+      "BRAND": "Xiaomi",
+      "DEVICE": "pudding",
+      "MANUFACTURER": "Xiaomi",
+      "MODEL": "25113PN0EG",
+      "FINGERPRINT": "Xiaomi/pudding_global/pudding:16/BQ2A.250705.001-BP2A.250605.031.A3/OS3.0.9.0.WPCMIXM:user/release-keys",
+      "PRODUCT": "pudding_global"
+    },
+    {
+      "name": "Xiaomi 17 Pro",
+      "BRAND": "Xiaomi",
+      "DEVICE": "pandora",
+      "MANUFACTURER": "Xiaomi",
+      "MODEL": "25098PN5AC",
+      "FINGERPRINT": "Xiaomi/pandora/pandora:16/BQ2A.250705.001-BP2A.250605.031.A3/OS3.0.7.0.WBLCNXM:user/release-keys",
+      "PRODUCT": "pandora"
+    },
+    {
+      "name": "Xiaomi 17 Max",
+      "BRAND": "Xiaomi",
+      "DEVICE": "byron",
+      "MANUFACTURER": "Xiaomi",
+      "MODEL": "2605EPN8EC",
+      "FINGERPRINT": "Xiaomi/byron/byron:16/BQ2A.250705.001-BP2A.250605.031.A3/OS3.0.302.0.WAFCNDM:user/release-keys",
+      "PRODUCT": "byron"
+    },
+    {
+      "name": "Xiaomi Pad 8 Pro",
+      "BRAND": "Xiaomi",
+      "DEVICE": "piano",
+      "MANUFACTURER": "Xiaomi",
+      "MODEL": "25091RP04C",
+      "FINGERPRINT": "Xiaomi/piano/piano:15/AQ3A.250226.002/OS3.0.4.0.WPYCNXM:user/release-keys",
+      "PRODUCT": "piano"
+    },
+    {
+      "name": "Pixel 8 Pro",
+      "BRAND": "google",
+      "DEVICE": "husky",
+      "MANUFACTURER": "Google",
+      "MODEL": "Pixel 8 Pro",
+      "FINGERPRINT": "google/husky/husky:15/BP1A.250405.005.B1/13151136:user/release-keys",
+      "PRODUCT": "husky"
+    },
+    {
+      "name": "Pixel 9 Pro XL",
+      "BRAND": "google",
+      "DEVICE": "komodo",
+      "MANUFACTURER": "Google",
+      "MODEL": "Pixel 9 Pro XL",
+      "FINGERPRINT": "google/komodo/komodo:15/BP1A.250405.005.A1/13151424:user/release-keys",
+      "PRODUCT": "komodo"
+    },
+    {
+      "name": "Pixel XL",
+      "BRAND": "google",
+      "DEVICE": "marlin",
+      "MANUFACTURER": "Google",
+      "MODEL": "Pixel XL",
+      "FINGERPRINT": "google/marlin/marlin:10/QP1A.191005.007.A3/5972272:user/release-keys",
+      "PRODUCT": "marlin"
+    },
+    {
+      "name": "Honor Magic V2 RSR",
+      "BRAND": "HONOR",
+      "DEVICE": "HNVER",
+      "MANUFACTURER": "HONOR",
+      "MODEL": "VER-N49DP",
+      "FINGERPRINT": "HONOR/VER-N49DP/HNVER:14/HONORVER-N49DP/8.0.0.125C00E125R1P1:user/release-keys",
+      "PRODUCT": "VER-N49DP"
+    },
+    {
+      "name": "Nothing Phone (2)",
+      "BRAND": "Nothing",
+      "DEVICE": "Pong",
+      "MANUFACTURER": "Nothing",
+      "MODEL": "A065",
+      "FINGERPRINT": "Nothing/Pong/Pong:14/UKQ1.230917.001/2409051749:user/release-keys",
+      "PRODUCT": "Pong"
+    },
+    {
+      "name": "Nothing Phone (4a) Pro",
+      "BRAND": "Nothing",
+      "DEVICE": "FroggerPro",
+      "MANUFACTURER": "Nothing",
+      "MODEL": "A069P",
+      "FINGERPRINT": "Nothing/FroggerPro/FroggerPro:15/AQ3A.250924.001/2603231635:user/release-keys",
+      "PRODUCT": "FroggerPro"
+    }
+  ]
+}
