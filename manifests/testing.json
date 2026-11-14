@@ -1,7 +1,7 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "channel": "testing",
-  "revision": "3fb419beb5143bae",
+  "revision": "60b3a82ec32d0552",
   "profiles": [
     {
       "id": "pixel-6a-bluejay",
@@ -49,6 +49,57 @@
       "devices": [
         "zulu"
       ]
+    }
+  ],
+  "documents": [
+    {
+      "kind": "devices",
+      "path": "device-props.json",
+      "sha256": "e3e6a7fd554e06fbcf18887da0f54a20aaf12555721f0f53ece17beff4e398ab",
+      "size": 12782,
+      "summary": "The catalogue of the device profiles."
+    },
+    {
+      "kind": "props",
+      "path": "app-props.json",
+      "sha256": "311036b2e6645af5a4bc00c34001f789e2568e0efd8be0a01fa5389903922c5b",
+      "size": 17600,
+      "summary": "The catalogue of the identity profiles of the applications."
+    },
+    {
+      "kind": "pif",
+      "path": "pif-props.json",
+      "sha256": "2af014cedab6368078d7bb89c345005c45210811bfb9f37d8bb8ef2335e4f663",
+      "size": 416,
+      "summary": "The authoritative profile of the Play Integrity Fix."
+    },
+    {
+      "kind": "blacklist",
+      "path": "blacklist.json",
+      "sha256": "d277009680761e63327e565dde9db3940dfe96ac0eac8edd43cafd2e8bd41a8c",
+      "size": 15,
+      "summary": "The policy of the blacklist of the applications."
+    },
+    {
+      "kind": "targets",
+      "path": "target-list.txt",
+      "sha256": "e427fa44b7715957abb9bfd19aa18d388e0c1ff5ddb130ea0ad3a8807841a944",
+      "size": 47,
+      "summary": "The list of the targets of the attestation."
+    },
+    {
+      "kind": "block_serial",
+      "path": "block-serial.txt",
+      "sha256": "60945e2c8a34c750803455f12152840b9228320b310d482325e29a88f13bd78c",
+      "size": 18,
+      "summary": "The metadata of the serial policy: the serials that are blocked."
+    },
+    {
+      "kind": "white_serial",
+      "path": "white-serial.txt",
+      "sha256": "43f2c00ce9f199df220edc58d12d4d048e755dc52c4ba17306294f228ff1525c",
+      "size": 14,
+      "summary": "The metadata of the serial policy: the serials that are allowed."
     }
   ]
 }

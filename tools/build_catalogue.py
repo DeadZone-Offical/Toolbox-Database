@@ -47,7 +47,91 @@ KEY_PATH = pathlib.Path(
     )
 )
 
-MANIFEST_SCHEMA_VERSION = 1
+#: The version of the schema of a manifest.
+#:
+#: The version 1 carried only the profiles of the Play Integrity Fix.
+#: The version 2 adds the `documents` array, which declares the digest of
+#: every **public** document of the catalogue. The array is additive: a
+#: client of the version 1 keeps working with a manifest of the version 2,
+#: because it ignores the members that it does not know.
+MANIFEST_SCHEMA_VERSION = 2
+
+#: The version of the schema that a client of the version 1 understands.
+#:
+#: The updater of the native core accepts a manifest of this version or
+#: of the version above it, and it never accepts a manifest of a version
+#: that it does not know.
+MANIFEST_SCHEMA_LEGACY = 1
+
+#: The public documents of the catalogue.
+#:
+#: A document is public when it carries no private key material. The
+#: document of the keybox is **not** public: it holds the private key
+#: material of a device, and a document that can replace a private key is
+#: a document that can read one. It is therefore never declared in a
+#: manifest and never fetched by the updater.
+#:
+#: The serial policies are **metadata**: they describe the serials that
+#: the owner wants to be blocked and the serials that the owner allows,
+#: and they are applied by the toolbox itself. They are not applied by
+#: the hook layer of the platform, and they never replace a real value of
+#: the platform.
+PUBLIC_DOCUMENTS: tuple[dict, ...] = (
+    {
+        "kind": "devices",
+        "path": "device-props.json",
+        "summary": "The catalogue of the device profiles.",
+    },
+    {
+        "kind": "props",
+        "path": "app-props.json",
+        "summary": "The catalogue of the identity profiles of the applications.",
+    },
+    {
+        "kind": "pif",
+        "path": "pif-props.json",
+        "summary": "The authoritative profile of the Play Integrity Fix.",
+    },
+    {
+        "kind": "blacklist",
+        "path": "blacklist.json",
+        "summary": "The policy of the blacklist of the applications.",
+    },
+    {
+        "kind": "targets",
+        "path": "target-list.txt",
+        "summary": "The list of the targets of the attestation.",
+    },
+    {
+        "kind": "block_serial",
+        "path": "block-serial.txt",
+        "summary": "The metadata of the serial policy: the serials that are blocked.",
+    },
+    {
+        "kind": "white_serial",
+        "path": "white-serial.txt",
+        "summary": "The metadata of the serial policy: the serials that are allowed.",
+    },
+)
+
+#: The documents of the catalogue that are never declared in a manifest.
+#:
+#: The document of the keybox carries the private key material of a
+#: device, so it is never signed, never published and never fetched.
+PRIVATE_DOCUMENTS: tuple[str, ...] = ("keybox.xml",)
+
+#: The identifiers of the legacy project.
+#:
+#: The reference catalogue carries a document of the properties of the
+#: boot that names the legacy identifiers of the project that the
+#: reference was built on. DeadZone does not publish them, and the
+#: document is refused when it is offered, because a property that names
+#: another project is a stale identifier of a runtime configuration.
+LEGACY_PROPERTY_IDENTIFIERS: tuple[str, ...] = (
+    "ro.boot.projectryu",
+    "ro.boot.author",
+    "projectryu",
+)
 
 # The profiles of the catalogue.
 #
@@ -283,12 +367,39 @@ def build(root: pathlib.Path, private: Ed25519PrivateKey) -> None:
             }
         )
 
+    # The public documents of the catalogue.
+    #
+    # Every document that the catalogue publishes and that carries no
+    # private key material is declared in the manifest with its digest,
+    # so that a client verifies the bytes that it downloaded against the
+    # bytes that the signer signed.
+    documents = []
+    for document in PUBLIC_DOCUMENTS:
+        source = REPO / document["path"]
+        if not source.is_file():
+            # A document that is not there is not declared. The manifest
+            # never promises a document that the repository does not
+            # hold, so the client never waits for a file that cannot
+            # arrive.
+            continue
+        body = source.read_bytes()
+        documents.append(
+            {
+                "kind": document["kind"],
+                "path": document["path"],
+                "sha256": hashlib.sha256(body).hexdigest(),
+                "size": len(body),
+                "summary": document["summary"],
+            }
+        )
+
     # The manifest of the stable channel.
     stable = {
         "schema_version": MANIFEST_SCHEMA_VERSION,
         "channel": "stable",
-        "revision": _revision(entries),
+        "revision": _revision(entries, documents),
         "profiles": entries,
+        "documents": documents,
     }
     _write_signed(manifests_dir / "stable.json", stable, private)
 
@@ -301,8 +412,9 @@ def build(root: pathlib.Path, private: Ed25519PrivateKey) -> None:
     testing = {
         "schema_version": MANIFEST_SCHEMA_VERSION,
         "channel": "testing",
-        "revision": _revision(entries),
+        "revision": _revision(entries, documents),
         "profiles": entries,
+        "documents": documents,
     }
     _write_signed(manifests_dir / "testing.json", testing, private)
 
@@ -319,14 +431,21 @@ def build(root: pathlib.Path, private: Ed25519PrivateKey) -> None:
     )
 
 
-def _revision(entries: list) -> str:
+def _revision(entries: list, documents: list | None = None) -> str:
     """The revision of a manifest.
 
     The revision is the digest of the list of the digests of the
-    profiles, so that two manifests that carry the same profiles carry
-    the same revision, and any change of a profile changes it.
+    profiles and of the public documents, so that two manifests that
+    carry the same content carry the same revision, and any change of a
+    profile or of a document changes it.
+
+    The revision is **not** the epoch of the configuration of the device.
+    The revision is a fact about the catalogue, and the epoch is a fact
+    about the runtime of the device.
     """
     material = "".join(entry["sha256"] for entry in entries)
+    for document in documents or []:
+        material += document["sha256"]
     return hashlib.sha256(material.encode("ascii")).hexdigest()[:16]
 
 
@@ -340,6 +459,49 @@ def _write_signed(path: pathlib.Path, document: dict, private: Ed25519PrivateKey
     )
 
 
+def validate() -> None:
+    """Check that the catalogue of the repository is coherent.
+
+    The check is the one that the continuous integration runs. It
+    refuses a catalogue that
+
+      * publishes a document that carries private key material,
+      * publishes a property of the boot that names the legacy project,
+      * declares a public document that the repository does not hold.
+    """
+    problems: list[str] = []
+
+    for name in PRIVATE_DOCUMENTS:
+        if name in {document["path"] for document in PUBLIC_DOCUMENTS}:
+            problems.append(
+                f"the document {name} carries private key material and "
+                "cannot be published"
+            )
+
+    for document in PUBLIC_DOCUMENTS:
+        source = REPO / document["path"]
+        if not source.is_file():
+            problems.append(
+                f"the public document {document['path']} is declared but "
+                "the repository does not hold it"
+            )
+
+    for source in sorted(REPO.glob("*.prop")):
+        text = source.read_text(encoding="utf-8", errors="replace")
+        for identifier in LEGACY_PROPERTY_IDENTIFIERS:
+            if identifier in text:
+                problems.append(
+                    f"the document {source.name} names the legacy identifier "
+                    f"{identifier} and cannot be published"
+                )
+
+    if problems:
+        raise SystemExit(
+            "the catalogue is not coherent:\n"
+            + "\n".join(f"  {problem}" for problem in problems)
+        )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -350,6 +512,7 @@ def main() -> int:
     arguments = parser.parse_args()
 
     private = load_key()
+    validate()
 
     if arguments.check:
         with tempfile.TemporaryDirectory() as temporary:
