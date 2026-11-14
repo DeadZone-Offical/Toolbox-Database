@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "MANUFACTURER": "Google",
+  "MODEL": "Pixel 9",
+  "BRAND": "google",
+  "PRODUCT": "caiman",
+  "DEVICE": "caiman",
+  "FINGERPRINT": "google/caiman/caiman:15/AP3A.241105.007/12654405:user/release-keys",
+  "RELEASE": "15",
+  "ID": "AP3A.241105.007",
+  "INCREMENTAL": "12654405",
+  "TYPE": "user",
+  "TAGS": "release-keys",
+  "SECURITY_PATCH": "2024-11-05",
+  "DEVICE_INITIAL_SDK_INT": "35",
+  "compatibility": {
+    "android_min": 15,
+    "android_max": 17,
+    "devices": [
+      "caiman",
+      "caiman_eea"
+    ]
+  }
+}

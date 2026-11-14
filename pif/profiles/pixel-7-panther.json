@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "MANUFACTURER": "Google",
+  "MODEL": "Pixel 7",
+  "BRAND": "google",
+  "PRODUCT": "panther",
+  "DEVICE": "panther",
+  "FINGERPRINT": "google/panther/panther:14/AP2A.240705.005/11404571:user/release-keys",
+  "RELEASE": "14",
+  "ID": "AP2A.240705.005",
+  "INCREMENTAL": "11404571",
+  "TYPE": "user",
+  "TAGS": "release-keys",
+  "SECURITY_PATCH": "2024-07-05",
+  "DEVICE_INITIAL_SDK_INT": "34",
+  "compatibility": {
+    "android_min": 14,
+    "android_max": 17,
+    "devices": [
+      "panther",
+      "panther_eea"
+    ]
+  }
+}

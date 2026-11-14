@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "MANUFACTURER": "Sony",
+  "MODEL": "Xperia 1 VI",
+  "BRAND": "Sony",
+  "PRODUCT": "pdx223",
+  "DEVICE": "zulu",
+  "FINGERPRINT": "Sony/pdx223/pdx223:14/68.2.A.1.75/0077.5000.0:user/release-keys",
+  "RELEASE": "14",
+  "ID": "68.2.A.1.75",
+  "INCREMENTAL": "0077.5000.0",
+  "TYPE": "user",
+  "TAGS": "release-keys",
+  "SECURITY_PATCH": "2024-08-01",
+  "DEVICE_INITIAL_SDK_INT": "33",
+  "compatibility": {
+    "android_min": 13,
+    "android_max": 16,
+    "devices": [
+      "zulu"
+    ]
+  }
+}

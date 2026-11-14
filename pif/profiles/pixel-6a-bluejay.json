@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "MANUFACTURER": "Google",
+  "MODEL": "Pixel 6a",
+  "BRAND": "google",
+  "PRODUCT": "bluejay",
+  "DEVICE": "bluejay",
+  "FINGERPRINT": "google/bluejay/bluejay:14/AP2A.240705.005/12627905:user/release-keys",
+  "RELEASE": "14",
+  "ID": "AP2A.240705.005",
+  "INCREMENTAL": "12627905",
+  "TYPE": "user",
+  "TAGS": "release-keys",
+  "SECURITY_PATCH": "2024-07-05",
+  "DEVICE_INITIAL_SDK_INT": "33",
+  "compatibility": {
+    "android_min": 13,
+    "android_max": 17,
+    "devices": [
+      "bluejay",
+      "bluejay_beta"
+    ]
+  }
+}

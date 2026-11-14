@@ -1,0 +1,10 @@
+# The signing key of the project is a secret and it never enters a repository.
+#
+# The private key lives in the private configuration of the operator:
+#
+#   ~/.config/deadzone/publishing/deadzone_ed25519_private.key
+#
+# The public key is committed, in `publishing/pinned-public-key.txt`, and
+# it is the key that the native core of DeadZone pins.
+*.key
+*.pem

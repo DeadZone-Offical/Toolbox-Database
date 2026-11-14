@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "channel": "testing",
+  "revision": "3fb419beb5143bae",
+  "profiles": [
+    {
+      "id": "pixel-6a-bluejay",
+      "version": "1.0.0",
+      "android_min": 13,
+      "android_max": 17,
+      "path": "pif/profiles/pixel-6a-bluejay.json",
+      "sha256": "f904daf440766bbe4085a9acb24bf5f166851f595218bceae79d1075a41eca3a",
+      "devices": [
+        "bluejay",
+        "bluejay_beta"
+      ]
+    },
+    {
+      "id": "pixel-7-panther",
+      "version": "1.0.0",
+      "android_min": 14,
+      "android_max": 17,
+      "path": "pif/profiles/pixel-7-panther.json",
+      "sha256": "5a88771879d1d85133d960536e9d214c97896ef7832341aaaad734b12b5c3942",
+      "devices": [
+        "panther",
+        "panther_eea"
+      ]
+    },
+    {
+      "id": "pixel-9-caiman",
+      "version": "1.0.0",
+      "android_min": 15,
+      "android_max": 17,
+      "path": "pif/profiles/pixel-9-caiman.json",
+      "sha256": "931b381b086b56a5ebcf07b091abcea08d8c9d07138ca22e2d61475031889ecf",
+      "devices": [
+        "caiman",
+        "caiman_eea"
+      ]
+    },
+    {
+      "id": "xperia-1-6-zulu",
+      "version": "1.0.0",
+      "android_min": 13,
+      "android_max": 16,
+      "path": "pif/profiles/xperia-1-6-zulu.json",
+      "sha256": "e03ad12a03ef658d1a8eb66bfc11ecd979d4b150b328932ccd308bfccfa5e57d",
+      "devices": [
+        "zulu"
+      ]
+    }
+  ]
+}

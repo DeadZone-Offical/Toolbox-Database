@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/DeadZone-Offical/Toolbox-Database/main/pif/schemas/pif-profile.schema.json",
+  "title": "DeadZone Play Integrity Fix profile",
+  "description": "The document of the Play Integrity Fix. It carries the identity of a public build of the platform and the compatibility of the profile.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "MANUFACTURER",
+    "MODEL",
+    "BRAND",
+    "PRODUCT",
+    "DEVICE",
+    "FINGERPRINT",
+    "RELEASE",
+    "ID",
+    "INCREMENTAL",
+    "TYPE",
+    "TAGS"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1
+    },
+    "MANUFACTURER": {
+      "type": "string",
+      "minLength": 1
+    },
+    "MODEL": {
+      "type": "string",
+      "minLength": 1
+    },
+    "BRAND": {
+      "type": "string",
+      "minLength": 1
+    },
+    "PRODUCT": {
+      "type": "string",
+      "minLength": 1
+    },
+    "DEVICE": {
+      "type": "string",
+      "minLength": 1
+    },
+    "FINGERPRINT": {
+      "type": "string",
+      "minLength": 1
+    },
+    "RELEASE": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ID": {
+      "type": "string",
+      "minLength": 1
+    },
+    "INCREMENTAL": {
+      "type": "string",
+      "minLength": 1
+    },
+    "TYPE": {
+      "type": "string",
+      "minLength": 1
+    },
+    "TAGS": {
+      "type": "string",
+      "minLength": 1
+    },
+    "SECURITY_PATCH": {
+      "type": "string"
+    },
+    "DEVICE_INITIAL_SDK_INT": {
+      "type": "string"
+    },
+    "compatibility": {
+      "type": "object",
+      "properties": {
+        "android_min": {
+          "type": "integer"
+        },
+        "android_max": {
+          "type": "integer"
+        },
+        "devices": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}
