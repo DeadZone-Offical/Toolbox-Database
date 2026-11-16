@@ -39,6 +39,9 @@ import tempfile
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
 from cryptography.hazmat.primitives import serialization
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import legacy_names as legacy  # noqa: E402
+
 REPO = pathlib.Path(__file__).resolve().parent.parent
 KEY_PATH = pathlib.Path(
     os.environ.get(
@@ -128,9 +131,7 @@ PRIVATE_DOCUMENTS: tuple[str, ...] = ("keybox.xml",)
 #: document is refused when it is offered, because a property that names
 #: another project is a stale identifier of a runtime configuration.
 LEGACY_PROPERTY_IDENTIFIERS: tuple[str, ...] = (
-    "ro.boot.projectryu",
-    "ro.boot.author",
-    "projectryu",
+    legacy.LEGACY_PROPERTY_IDENTIFIERS
 )
 
 # The profiles of the catalogue.

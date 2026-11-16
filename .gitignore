@@ -8,3 +8,7 @@
 # it is the key that the native core of DeadZone pins.
 *.key
 *.pem
+
+# The bytecode of the tools is a build artefact and never enters the repository.
+__pycache__/
+*.pyc

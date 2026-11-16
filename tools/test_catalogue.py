@@ -30,6 +30,9 @@ import json
 import pathlib
 import sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import legacy_names as legacy  # noqa: E402
+
 REPO = pathlib.Path(__file__).resolve().parent.parent
 
 
@@ -284,7 +287,8 @@ def test_the_repository_publishes_no_legacy_property() -> None:
     for source in sorted(REPO.glob("*.prop")):
         text = source.read_text(encoding="utf-8", errors="replace")
         expect(
-            "projectryu" not in text.lower(),
+            not any(name in text.lower()
+                    for name in legacy.LEGACY_PROPERTY_IDENTIFIERS),
             f"the document {source.name} names the legacy project",
         )
     expect(
