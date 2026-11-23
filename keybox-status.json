@@ -1,0 +1,26 @@
+{
+  "status": "ok",
+  "total_valid": 1,
+  "last_updated": "2026-11-23",
+  "keyboxes": [
+    {
+      "id": 1,
+      "name": "DeadZone Repository Keybox",
+      "device_id": "RKP_DZ261122",
+      "download_url": "https://raw.githubusercontent.com/DeadZone-Offical/Toolbox-Database/main/keybox.xml",
+      "source": "DeadZone Toolbox-Database",
+      "uploaded_at": "2026-11-23",
+      "is_rkp": true,
+      "certificate_count": 4,
+      "algorithms": [
+        "ecdsa"
+      ],
+      "certificate_details": [
+        {
+          "algorithm": "ecdsa",
+          "count": 4
+        }
+      ]
+    }
+  ]
+}
